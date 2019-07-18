@@ -1,0 +1,39 @@
+---
+layout: fundament
+title: Edit
+---
+<h2>Schritt 1</h2>
+<div class="comment">Egal, was angelegt wird, es ist immer ein <strong>Information Object</strong>...</div>
+
+<div class="comment"><strong>Type</strong> des Informationsobjekts</div>
+
+I am editing a...
+<input class="form-control form-control-lg" type="text" placeholder="Typ von dem bearbeiteten Informationsobjekt, Bsp. Comic">
+
+Die Seite selber repräsentiert das <strong>Information Object</strong>. Alle weiteren Objekte, die per Button auf dieser Seite angelegt werden, sind eigene Informationsobjekte, die mit diesem verknüpft werden.
+Die Verknüpfung selber ist auch ein Informationsobjekt (vom Typ "Relation?")...
+
+<hr/>
+
+<h2>Schritt 2</h2>
+Wenn kein vordefiniertes <strong>Template</strong> ausgewählt ist (Bsp. Comic, oder vom user selbst bestimmtes Basistemplate), kann man völlig frei neue verknüpfte Objekte anlegen.
+
+Bsp.
+<div id="objects">
+
+</div>
+<button type="button" class="btn btn-secondary btn-lg btn-block new-object">+</button>
+
+<script>
+  $('.new-object').click(function(){
+    console.log("Add new object");
+    $('#objects').append('<form style="margin-top:5px;margin-bottom:5px;padding:2px;background-color:silver;"><div class="form-group"><label for="exampleField01">I am editing a...</label><input class="form-control" id="typeInput01" aria-describedby="typeInput01Help" placeholder="Autocomplete, e.g. Title"><small id="typeInput01Help" class="form-text text-muted">Add Type of Information Object</small></div></form>')
+  });
+</script>
+
+<div class="comment">Im Endeffekt ist dann das, was auftauchen soll, eine Seite, ähnlich dieser Ausgangsseite, auf der dann wieder Objekte angelegt werden.</div>
+
+<hr/>
+
+<h2>Schritt 3</h2>
+Hier könnte man sich überlegen, wie die Box, die der Button oben hinzufügt, aussieht, nachdem man den Typ des Informationsobjektes angegeben hat. Löschen-Button usw. Sollte auch möglich sein, in dieses Feld einfach ein Bild reinzuziehen (das dann auf den IIIF-Server geladen und verknüpft wird)

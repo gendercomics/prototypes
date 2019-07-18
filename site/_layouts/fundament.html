@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de-AT">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="kraus-notizen">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <title>{{ page.title }}</title>
+    <link href="https://fundament.acdh.oeaw.ac.at/html/dist/fundament/css/fundament.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://fundament.acdh.oeaw.ac.at/html/dist/fundament/vendor/jquery/jquery.min.js"></script>
+
+  </head>
+  <body class="home" style="background-color:white;">
+    <div class="hfeed site" id="page">
+      {% include navbar.html %}
+      <div class="wrapper" id="index-wrapper" style="padding-top:20px">
+        <div class="container" id="content" tabindex="-1">
+          {{ content }}
+        </div>
+        <!-- Container end -->
+      </div>
+      <!-- Wrapper end -->
+      {% include footer.html %}
+    </div>
+    <!-- #page we need this extra closing tag here -->
+    <script type="text/javascript" src="https://fundament.acdh.oeaw.ac.at/html/dist/fundament/js/fundament.min.js"></script>
+  </body>
+</html>

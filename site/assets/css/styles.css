@@ -1,0 +1,22 @@
+.navbar .navbar-brand img {
+  max-height: none;
+  height:5rem;
+}
+
+.navbar {
+  border-bottom: 5px solid #585858
+}
+
+#content a {
+  color: #0068b0;
+}
+
+
+#wrapper-hero-content::after {
+    background-color: rgba(108,117,125,.25);
+}
+
+
+.card-wrapper .card .card-inner {
+  border-top-color: #585858 !important;
+}

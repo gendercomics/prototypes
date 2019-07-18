@@ -1,0 +1,26 @@
+<!-- ******************* The Navbar Area ******************* -->
+<div class="wrapper-fluid wrapper-navbar sticky-navbar" id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
+  <a class="skip-link screen-reader-text sr-only" href="#content">Skip to content</a>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container" >
+      <!-- Your site title as branding in the menu -->
+      <a href="/" class="navbar-brand custom-logo-link" rel="home" itemprop="url"><a class="navbar-brand site-title-with-logo" rel="home" href="/" title="gendercomics-test" itemprop="url">gendercomics-test</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <!-- Your menu goes here -->
+        <ul id="main-menu" class="navbar-nav">
+
+          {% for item in site.data.navigation %}
+            <li class="nav-item {% if page.url == item.link %}active{% endif %}"><a title="{{ item.name }}" href="{{ item.link }}" class="nav-link">{{ item.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <!-- .collapse navbar-collapse -->
+    </div>
+    <!-- .container -->
+  </nav>
+  <!-- .site-navigation -->
+</div>
+<!-- .wrapper-navbar end -->
